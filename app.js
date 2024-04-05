@@ -56,7 +56,7 @@ function displayData(minerData, fullData) {
     const globalLast24HoursCount = globalStats.last24HrsImageCount + globalStats.last24HrsTextCount;
     const yourMiningPowerRatio = yourLast24HoursCount / globalLast24HoursCount; // Keep as a decimal for calculations
 
-    const fdvValues = [10000000, 30000000, 50000000];
+    const fdvValues = [50000000, 100000000, 300000000, 500000000];
     const earningsStatements = fdvValues.map(fdv => {
         const yourEarnings = (yourMiningPowerRatio * (0.05 * fdv)).toFixed(2);
         return `If $HUE dropped today at a $${fdv.toLocaleString()} FDV, then you would receive the equivalent of $${yourEarnings}.`;
